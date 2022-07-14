@@ -3,7 +3,7 @@ const mostrarReportes = document.querySelector('tbody');
 
 
 const urlObtenerComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/atendidos/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/reportes/atendidos/';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/atendidos/';
 
 
 

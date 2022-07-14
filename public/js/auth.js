@@ -4,7 +4,7 @@
 const miFormulario = document.querySelector('form');
 
 const url = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/auth/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/auth/';
+:'https://proyecto-tecniapp.herokuapp.com/api/auth/';
 
 
 miFormulario.addEventListener('submit', ev => {

@@ -2,7 +2,7 @@
 const miFormulario = document.querySelector('form');
 
 const urlReg = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/';
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/';
 
 // // Validar el token del localstorage
 // const validarJWT = async() =>{

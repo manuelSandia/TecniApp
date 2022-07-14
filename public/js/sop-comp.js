@@ -3,7 +3,7 @@ const mostrarSoportes = document.querySelector('tbody');
 
 
 const urlObtenerComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/completadas/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/soportes/completadas/';
+:'https://proyecto-tecniapp.com/api/soportes/completadas/';
 
 
 

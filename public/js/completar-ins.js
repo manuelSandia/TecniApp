@@ -1,7 +1,7 @@
 const body2      = document.querySelector('body');
 
 const urlComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/completar/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/';
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/completar/';
 
 
 

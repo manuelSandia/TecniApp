@@ -11,10 +11,10 @@ const miFormulario = document.querySelector('form');
 
 
 const url2 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/obtener/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/obtener/';
+:'https://proyecto-tecniapp.herokuapp.com//instalaciones/obtener/';
 
 const urlAct = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/actualizar/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/actualizar/';
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/actualizar/';
 
 // Dibujar la Informacion a Actualizar en el Formulario:
 document.addEventListener('DOMContentLoaded', ()=>{

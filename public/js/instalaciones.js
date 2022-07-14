@@ -11,10 +11,10 @@ const InstCompletadas = document.querySelector('#h2-1');
 
 
 const urlIns = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/';
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/';
 
 const urlComp1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/completadas/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/obtener/';
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/completadas/';
 
 
 fetch(urlIns + 'obtener', {

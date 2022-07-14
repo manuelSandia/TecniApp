@@ -11,10 +11,10 @@ const repRealizados = document.querySelector('#h2-1');
 
 
 const urlRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/reportes/';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/';
 
 const urlComp1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/atendidos/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/reportes/atendidos/';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/atendidos/';
 
 
 fetch(urlRep + 'obtener', {

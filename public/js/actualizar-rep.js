@@ -9,10 +9,10 @@ const fechaForm       = document.querySelector('#validationCustom05');
 const descripcionForm = document.querySelector('#validationCustom06');
 
 const urlObtRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/reportes/obtener/';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/';
 
 const urlAct = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/actualizar/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/reportes/actualizar/';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/actualizar/';
 
 document.addEventListener('DOMContentLoaded', ()=>{
 

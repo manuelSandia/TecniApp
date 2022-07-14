@@ -2,7 +2,7 @@ const body      = document.querySelector('body');
 const btnBorrar = document.querySelector('.rounded-circle me-2 borrar');
 
 const urlBorrarRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/borrar/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/reportes/borrar/';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/borrar/';
 
 // FUNCION PARA BORRAR REPORTE:   
 body.addEventListener('click', ()=>{

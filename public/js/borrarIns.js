@@ -3,7 +3,7 @@ const btnBorrar = document.querySelector('.rounded-circle me-2 borrar');
 
 
 const url1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/';
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/';
 
 
 // FUNCION PARA BORRAR INSTALACION:   

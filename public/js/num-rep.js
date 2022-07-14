@@ -1,7 +1,7 @@
 const numero2 = document.querySelector('#h2-3');
 
 const urlRep1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/reportes/';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/';
 
 fetch(urlRep1 + 'obtener', {
     method: 'GET', 

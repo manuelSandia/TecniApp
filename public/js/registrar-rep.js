@@ -1,7 +1,7 @@
 const miFormulario = document.querySelector('form');
 
 const urlRegRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/reportes/';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/';
 
 miFormulario.addEventListener('submit', ev => {
     ev.preventDefault();

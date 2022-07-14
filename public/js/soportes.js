@@ -11,10 +11,10 @@ const sopRealizados = document.querySelector('#h2-1');
 
 
 const urlSop = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/soportes/';
+:'https://proyecto-tecniapp.herokuapp.com/api/soportes/';
 
 const urlComp1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/completadas/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/obtener/';
+:'https://proyecto-tecniapp.herokuapp.com/api/soportes/completadas/';
 
 
 fetch(urlSop + 'obtener', {

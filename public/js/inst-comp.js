@@ -3,7 +3,7 @@ const mostrarInstalaciones = document.querySelector('tbody');
 
 
 const urlObtenerComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/completadas/'
-:'https://restserver-curso-node-manuel.herokuapp.com/api/instalaciones/';
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/completadas';
 
 
 
