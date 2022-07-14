@@ -1,0 +1,37 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    background: rgb(210,210,210);
+    background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(150,150,150,1) 59%, rgba(56,58,59,1) 100%);
+}
+#img1{
+    margin-left: 250px;
+    margin-top: 20px;
+    
+}
+#img2{
+    margin-left: -205px;
+    margin-top: 20px;
+}
+
+h1{
+    margin-top: -80px;
+    margin-left: 200px;
+    font-weight: bold;
+    font-size: 80px;
+    color: #a20013;
+    transition: all 0.3s;
+}
+p{
+    margin-left: 290px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h1:hover{
+    transition: all 0.3s;
+    transform: scale(1.1);
+    color: red;
+}

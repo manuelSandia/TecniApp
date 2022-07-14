@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/chat.css">
+    <title>Registro Instalaciones</title>
+</head>
+<body>
+    
+
+    <!-- Navbar Principal!!! -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/snapsvg-seeklogo.com.svg" alt="" width="40" height="34" class="d-inline-block align-text-top">
+            TecniApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#"></a>
+              <a class="nav-link" href="#"></a>
+              <a class="nav-link" href="#"></a>
+              <a class="nav-link disabled"></a>
+              
+            </div>
+          </div>
+        </div>
+    </nav>
+    <!-- fin del Navbar Principal -->
+
+     
+    <div class="grid-container">
+
+        <div class="grid-item1">
+            <div class="container-grid">
+        
+                <div class="item1 1 shadow bg-body rounded">
+                    <div style="position: relative;" class="input-group">    
+                        <!-- <input type="text"
+                          
+                                id="txtUid"
+                                class="form-control mb-10"
+                                placeholder="uid" 
+                                autocomplete="off"> -->
+            
+                        <input type="text"
+                                id="txtMensaje"
+                                class="form-control form-control-lg"
+                                placeholder="mensaje"
+                                autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="item3 3 shadow bg-body rounded">
+                    <div style="position: relative;" id="caja-user">
+                        <h3>Usuarios</h3>
+                        <hr>
+                        <ul id="ulUsuarios">
+            
+                        </ul>
+                    </div>
+                </div>
+
+                    
+                    
+                
+                <div class="item2 2 shadow bg-body rounded overflow-auto">
+                    <div style="position: relative;" id="caja-msj">
+                        <h3 id="titulo"></h3>
+                            
+                        <div class="col-xxl-6" id="caja">
+                            
+                            <ul class="list-group" id="ulMensajes"></ul>
+                        </div>      
+                    </div>
+                </div>
+                            
+            </div>
+        </div> 
+        <!-- fin del contenido -->
+
+
+
+        <div class="grid-item2">
+          <main class="d-flex flex-nowrap">
+            <h1 class="visually-hidden">Sidebars examples</h1>
+          
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 200px;">
+              <!-- <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                <span class="fs-4">Menu</span>
+              </a>
+              <hr> -->
+              <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                  <a href="dashboard.html" class="nav-link text-white" aria-current="page" id="a-1">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                    Inicio
+                  </a>
+                </li>
+                <li>
+                  <a href="instalaciones.html" class="nav-link text-white" id="a-2">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                    Instalaciones
+                  </a>
+                </li>
+                <li>
+                  <a href="soportes.html" class="nav-link text-white" id="a-3">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                    Soportes Tc.
+                  </a>
+                </li>
+                <li>
+                  <a href="reportes.html" class="nav-link text-white" id="a-4">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                    Reportes F. 
+                  </a>
+                </li>
+                <li>
+                  <a href="chat-app.html" class="nav-link active text-white" id="a-5">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                    Mensajes
+                  </a>
+                </li>
+              </ul>
+              <hr>
+            </div>
+        </div>
+    </div>
+
+        
+
+         
+
+          
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/chat.js"></script>
+
+
+</body>
+</html>

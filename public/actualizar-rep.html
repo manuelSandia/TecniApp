@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/registros.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Actualizar Reporte</title>
+</head>
+<body>
+    
+
+     <!-- Navbar Principal!!! -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/snapsvg-seeklogo.com.svg" alt="" width="40" height="34" class="d-inline-block align-text-top">
+            TecniApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#"></a>
+              <a class="nav-link" href="#"></a>
+              <a class="nav-link" href="#"></a>
+              <a class="nav-link disabled"></a>
+              <img src="./assets/img/user-1.png" alt="" width="42" height="42" class="rounded-circle me-2" id="userimg">
+              <div class="dropdown">
+                
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="username">
+                  
+                </button>
+                <ul class="dropdown-menu">
+                  <!-- <li><a class="dropdown-item" href="#">Link 1</a></li>
+                  <li><a class="dropdown-item" href="#">Link 2</a></li> -->
+                  <li><a id="btnsalir" class="dropdown-item" href="#">Cerrar sesion</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- fin del Navbar Principal -->
+
+     
+      <div class="grid-container">
+        <div class="grid-item1">
+          <div class="container-grid">
+        
+            <!-- <div class="item1 1 shadow bg-body rounded">
+              <div style="position: relative;">
+                <h1 id="titulo">Realizadas:</h1>
+                <img src="assets/img/realizado.png" class="rounded float-start" alt="..." id="antena">
+                <h2 id="h2-1">0</h2>
+              </div>
+            </div> -->
+
+            <!-- <div class="item3 3 shadow bg-body rounded">
+                <div style="position: relative;">
+                  <h1 id="h1-3">Pendientes:</h1>
+                  <img src="assets/img/pendiente.png" class="rounded float-start" alt="..." id="icon-2">
+                  <h2 id="h2-3">0</h2>
+                </div>
+              </div> -->
+
+              <!-- <div class="item4 4 shadow bg-body rounded">
+                <div style="position: relative;">
+                 
+                  <img src="assets/img/registro-4.png" class="rounded float-start" alt="..." id="icon-3">
+
+                </div>
+              </div> -->
+              
+            
+            <div class="item2 2 shadow bg-body rounded">
+              <div style="position: relative;">
+                <div id="formulario">
+                     <!-- Formulario de Registro -->
+                <h1>Actualizar Reporte</h1>
+                <hr>
+                <!-- <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">C.I.</span>
+                    <input type="text" class="form-control" placeholder="Cedula de Identidad" aria-label="Cedula de Identidad" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Nombres</span>
+                    <input type="text" class="form-control" placeholder="Nombres" aria-label="Nombres" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Apellidos</span>
+                    <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Direccion</span>
+                    <input type="text" class="form-control" placeholder="Direccion" aria-label="Direccion" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Zona</span>
+                    <input type="text" class="form-control" placeholder="Zona" aria-label="Zona" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Coordenadas</span>
+                    <input type="text" class="form-control" placeholder="Coordenadas" aria-label="Coordenadas" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Antena</span>
+                    <input type="text" class="form-control" placeholder="Modelo de Antena" aria-label="Modelo de Antena" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Router</span>
+                    <input type="text" class="form-control" placeholder="Modelo de Router" aria-label="Modelo de Router" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Fecha</span>
+                    <input type="date" class="form-control" placeholder="Coordenadas" aria-label="Coordenadas" aria-describedby="basic-addon1">
+                </div> -->
+
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-4">
+                      <label for="validationCustom01" class="form-label">Nombres</label>
+                      <input type="text" name="nombre" class="form-control" id="validationCustom01" value="" required>
+                      <div class="valid-feedback">
+                        Excelente!
+                      </div>
+                      <div class="invalid-feedback">
+                        Porfavor ingrese el nombre
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationCustom02" class="form-label">Apellidos</label>
+                      <input type="text" name="apellido" class="form-control" id="validationCustom02" value="" required>
+                      <div class="valid-feedback">
+                        Excelente!
+                      </div>
+                      <div class="invalid-feedback">
+                        Porfavor ingrese los apellidos
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationCustomUsername" class="form-label">Cedula de Identidad</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">C.I.</span>
+                        <input type="text" name="cedula" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                          Porfavor ingrese el numero de C.I.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="validationCustomUsername01" class="form-label">Numero de Telefono</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">Tlf.</span>
+                        <input type="text" name="telefono" class="form-control" id="validationCustomUsername01" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                          Porfavor ingrese el numero de telefono
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationCustom03" class="form-label">Direccion</label>
+                      <input type="text" name="direccion" class="form-control" id="validationCustom03" required>
+                      <div class="invalid-feedback">
+                        Porfavor provea una direccion valida!.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom04" class="form-label">Zona</label>
+                      <select class="form-select" name="zona" id="validationCustom04" required>
+                        <option selected disabled value=""></option>
+                        <option>Zona-1</option>
+                        <option>Zona-2</option>
+                        <option>Zona-3</option>
+                        <option>Zona-4</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Porfavor selecione una Zona!.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="validationCustom05" class="form-label">Fecha</label>
+                      <input type="date" name="fecha" class="form-control" id="validationCustom05" required>
+                      <div class="invalid-feedback">
+                        Porfavor ingrese fecha!.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationCustom06" class="form-label">Descripcion</label>
+                      <input type="text" name="descripcion" class="form-control" id="validationCustom06" required>
+                      <div class="invalid-feedback">
+                        Porfavor agregue una Descripcion.
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="form-check" id="check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                          La informacion suministrada es correcta?
+                        </label>
+                        <div class="invalid-feedback">
+                          Debes marcar si la inf es correcta antes de Actualizar! 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Actualizar</button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+           
+           
+            
+          </div>
+        </div>
+        <div class="grid-item2">
+          <main class="d-flex flex-nowrap">
+            <h1 class="visually-hidden">Sidebars examples</h1>
+          
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 200px;">
+              <!-- <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                <span class="fs-4">Menu</span>
+              </a>
+              <hr> -->
+              <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                  <a href="dashboard.html" class="nav-link text-white" aria-current="page" id="a-1">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                    Inicio
+                  </a>
+                </li>
+                <li>
+                  <a href="instalaciones.html" class="nav-link text-white" id="a-2">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                    Instalaciones
+                  </a>
+                </li>
+                <li>
+                  <a href="soportes.html" class="nav-link text-white" id="a-3">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                    Soportes Tc.
+                  </a>
+                </li>
+                <li>
+                  <a href="reportes.html" class="nav-link active text-white" id="a-4">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                    Reportes F. 
+                  </a>
+                </li>
+                <li>
+                  <a href="chat-app.html" class="nav-link text-white" id="a-5">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                    Mensajes
+                  </a>
+                </li>
+              </ul>
+              <hr>
+            </div>
+        </div>
+      </div>
+
+        
+
+         
+
+
+<script src="./socket.io/socket.io.js"></script> 
+<script src="./js/user-log.js"></script>         
+<script src="./js/actualizar-rep.js"></script>
+<script src="./js/registro.js"></script>
+
+
+
+</body>
+</html>

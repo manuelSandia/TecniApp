@@ -1,0 +1,167 @@
+*{
+ 
+}
+
+
+html,
+body {
+  
+  border: 20px;
+  height: 105%;
+  /* width: 100%;
+  height: 100%; */
+  background: rgb(210,210,210);
+  background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(150,150,150,1) 59%, rgba(56,58,59,1) 100%);
+}
+
+.grid-container{
+  display: grid;
+  height:  100vh;
+  grid-template-columns: 220px 1fr 1fr 1fr;
+  grid-template-rows:    repeat(4, 1fr);
+  grid-template-areas:
+    "menu cont cont cont"
+    "menu cont cont cont"
+    "menu cont cont cont"
+    "menu cont cont cont";
+}
+
+.grid-item1 { grid-area: cont; }
+.grid-item2 { grid-area: menu;}
+
+.grid-container > div{
+  object-fit: cover;
+}
+
+main{
+  height: 100%;
+  
+}
+
+.container-grid {
+    display: grid;
+    height:  100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:    repeat(4, 1fr);
+    grid-template-areas:
+    "b b b b c"
+    "b b b b c"
+    "b b b b c"
+    "a a a a c";
+    gap: 0px;
+  }
+  
+  .container-grid > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    display:flex;
+    padding: center;
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    margin-right: 20px;
+  }
+
+
+
+.item1 { grid-area: a; }
+.item2 { grid-area: b; }
+.item3 { grid-area: c; }
+/* .item4 { grid-area: d; } */
+
+
+
+/* .item1:hover{
+  filter: grayscale(30%);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.item2:hover{
+  filter: grayscale(30%);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.item3:hover{
+  filter: grayscale(30%);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.5s;
+} */
+
+/* .item4:hover{
+  filter: grayscale(30%);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.5s;
+} */
+ 
+
+
+
+
+
+/* #check{
+    margin-left: 600px;
+} */
+
+.dropdown{
+  margin-left:0px;
+}
+/* .dropdown-menu{
+  margin-left
+} */
+
+#userimg{
+  margin-left: 895px;
+}
+
+#caja{
+    position: relative;
+}
+
+/* #titulo{
+    margin-left: 150px;
+    position: static;
+} */
+
+
+#ulMensajes{
+    main-left: 20px;
+    
+}
+
+#caja-user{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#caja-msj{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+.text-primary{
+  font-weight: bold;
+}
+
+#txtMensaje{
+  /* margin-left: 50px;
+  margin-top: 50px; */
+}
+
+#fecha{
+  
+  font-size: 12px;
+}
+
+p{
+  font-size: 18px;
+}
+
+.list-group-item{
+  background-color:#e2e2e2;
+}
