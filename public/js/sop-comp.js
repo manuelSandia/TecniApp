@@ -3,11 +3,11 @@ const mostrarSoportes = document.querySelector('tbody');
 
 
 const urlObtenerComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/completadas/'
-:'https://proyecto-tecniapp.com/api/soportes/completadas/';
+:'https://proyecto-tecniapp.herokuapp.com/api/soportes/completadas/';
 
 
 
-fetch(urlObtenerComp , {
+fetch(urlObtenerComp, {
     method: 'GET', 
     body: JSON.stringify(),
     headers: { 'Content-Type': 'application/json'}

@@ -11,7 +11,7 @@ const miFormulario = document.querySelector('form');
 
 
 const url2 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/obtener/'
-:'https://proyecto-tecniapp.herokuapp.com//instalaciones/obtener/';
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/obtener/';
 
 const urlAct = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/actualizar/'
 :'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/actualizar/';

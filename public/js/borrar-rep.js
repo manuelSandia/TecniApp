@@ -35,7 +35,7 @@ body.addEventListener('click', ()=>{
             .then( resp => resp.json() )
             .then((resp)=>{
               console.log(resp);
-              // window.location.reload();
+              window.location.reload();
             })
             .catch( err =>{
               console.log(err);

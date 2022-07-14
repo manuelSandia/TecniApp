@@ -1,7 +1,7 @@
 const body2      = document.querySelector('body');
 
 const urlComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/completar/'
-:'https://proyecto-tecniapp.herokuapp.com/api/reportes/completar';
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/completar/';
 
 
 
