@@ -235,102 +235,96 @@ main{
   transition: all 0.3s;
 }
 
-@media screen and (max-width:830px){
-  /* cuadro-1 */
-  #antena{
-    height: 150px;
-    width:  150px;
-    margin-left: 30px;
+/* dropdown */
+.dropdown{
+  margin-left:0px;
+}
+
+#userimg{
+  margin-left: 930px;
+}
+
+/* VISTA PARA SMARTPHONES */
+@media screen and (max-width:450px){
+
+  html,
+  body {
+    border: 20px;
+    height: 125%;
+    background: rgb(210,210,210);
+    background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(150,150,150,1) 59%, rgba(56,58,59,1) 100%);
   }
 
-  #h1-1{
-    margin-left: 10px;
-    font-size:   30px;
-    transition:  all 0.5s;
+  .grid-container{
+    display: grid;
+    height:  100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows:    repeat(4, 1fr);
+    grid-template-areas:
+      "cont"
+      "cont"
+      "cont"
+      "cont";
   }
   
+  .grid-item1 { grid-area: cont; }
+  .grid-item2 { 
+    /* grid-area: menu;  */
+    display:   none !important;
+  }
   
-  #h2-1{
-    margin-left:  20px;
-    margin-right: 10px;
-    margin-top:   120px;
-    font-weight:  bold;
-    font-size:    40px;
+  .grid-container > div{
+    object-fit: cover;
   }
-
-  /* cuadro-2 */
-  #icon-1{
-    height: 160px;
-    width:  160px;
-    margin-left: 30px;
-    margin-top:  30px;
+  
+  main{
+    height: 100%; 
   }
-
-  #h1-2{
-    margin-top:  5px;
+  
+  .container-grid {
+    display: grid;
+    height:  40vh;
+    width:   40vh;
     margin-left: 40px;
-    font-size:   30px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows:    repeat(4, 1fr);
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d";
+    gap: 1px;
   }
   
-  #h2-2{
-    margin-left:  80px;
-    margin-right: 15px;
-    margin-top:   50px;
-    font-weight:  bold;
-    font-size:    80px;
-  }
-
-  /* cuadro-3 */
-  #icon-2{
-    height: 160px;
-    width:  160px;
-    margin-left: 30px;
-    margin-top:  30px;
-  }
-
-  #h1-3{
-    margin-top:  5px;
-    margin-left: 0px;
-    font-size:   30px
+  .dropdown{
+    margin-left:0px;
   }
   
-  #h2-3{
-    margin-left:  230px;
-    margin-right: 10px;
-    margin-top:   50px;
-    font-weight:  bold;
-    font-size:    80px;
-  }
-
-  /* cuadro-4 */
-  #icon-3{
-    height: 150px;
-    width:  150px;
-    margin-left: 30px;
-  }
-
-  #h1-4{
-    margin-top: 5px;
-    margin-left: 15px;
-    font-size: 30px;
-  }
-  
-  #h2-4{
-    margin-left:  20px;
-    margin-right: 10px;
-    margin-top:   120px;
-    font-weight:  bold;
-    font-size:    40px;
+  #userimg{
+    margin-top: -100px;
   }
 
 }
 
+
+
 @media screen and (max-width:920px){
+
+  /* dropdown */
+  .dropdown{
+    margin-top: 0px;
+  }
+
+  #userimg{
+    margin-left:0px;
+  }
+
   /* cuadro-1 */
   #antena{
     height: 150px;
     width:  150px;
     margin-left: 50px;
+    display: inline;
   }
 
   #h1-1{
@@ -418,6 +412,16 @@ main{
 
 
 @media screen and (max-width:1069px){
+
+    /* dropdown */
+  .dropdown{
+    margin-top: 0px;
+  }
+
+  #userimg{
+    margin-left:640px;
+  }
+
   /* cuadro-1 */
   #antena{
     height: 180px;
@@ -508,11 +512,113 @@ main{
 
 }
 
-/* dropdown */
+@media screen and (min-width:1750px){
+
+  html,
+body {
+  border: 0px;
+  height: 103%;
+  background: rgb(210,210,210);
+  background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(150,150,150,1) 59%, rgba(56,58,59,1) 100%);
+}
+
+  /* dropdown */
 .dropdown{
-  margin-left:0px;
+  margin-top: 0px;
 }
 
 #userimg{
-  margin-left: 895px;
+  margin-left:1340px;
 }
+
+/* cuadro-1 */
+#antena{
+  height: 380px;
+  width:  380px;
+  margin-left: 80px;
+}
+
+#h1-1{
+  margin-left: 120px;
+  font-size:   60px;
+  transition:  all 0.5s;
+}
+
+
+#h2-1{
+  margin-left:   450px;
+  margin-right: -50px;
+  margin-top:    250px;
+  font-weight:   bold;
+  font-size:     90px;
+}
+
+/* cuadro-2 */
+#icon-1{
+  height: 390px;
+  width:  390px;
+  margin-left: 30px;
+  margin-top:  0px;
+}
+
+#h1-2{
+  margin-top:  5px;
+  margin-left: 200px;
+  font-size:   60px;
+}
+
+#h2-2{
+  margin-left:  80px;
+  margin-right: 15px;
+  margin-top:   210px;
+  font-weight:  bold;
+  font-size:    120px;
+}
+
+/* cuadro-3 */
+#icon-2{
+  height: 390px;
+  width:  390px;
+  margin-left: 30px;
+  margin-top:  10px;
+}
+
+#h1-3{
+  margin-top:  5px;
+  margin-left: 220px;
+  font-size:   60px
+}
+
+#h2-3{
+  margin-left:  530px;
+  margin-right: 10px;
+  margin-top:   210px;
+  font-weight:  bold;
+  font-size:    120px;
+}
+
+/* cuadro-4 */
+#icon-3{
+  height: 380px;
+  width:  380px;
+  margin-left: 80px;
+}
+
+#h1-4{
+  /* margin-left: 10px; */
+  margin-top:  5px;
+  margin-left: 80px;
+  font-size:   60px;
+}
+
+#h2-4{
+  margin-left:  250px;
+  margin-right: 10px;
+  margin-top:   100px;
+  font-weight:  bold;
+  font-size:    90px;
+}
+
+}
+
+
