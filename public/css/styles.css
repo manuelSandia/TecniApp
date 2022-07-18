@@ -250,7 +250,7 @@ main{
   html,
   body {
     border: 20px;
-    height: 132%;
+    height: 135%;
     background: rgb(210,210,210);
     background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(150,150,150,1) 59%, rgba(56,58,59,1) 100%);
   }
@@ -297,11 +297,15 @@ main{
   }
   
   .dropdown{
+    /* margin-top:-500; */
     margin-left:0px;
+    width: 20px;
   }
   
   #userimg{
-    margin-top: -100px;
+    margin-left: -1000px;
+    display:   none !important;
+    
   }
 
 }
