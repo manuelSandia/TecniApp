@@ -2,14 +2,10 @@
  
 }
 
-
 html,
 body {
-  
   border: 20px;
   height: 105%;
-  /* width: 100%;
-  height: 100%; */
   background: rgb(210,210,210);
   background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(150,150,150,1) 59%, rgba(56,58,59,1) 100%);
 }
@@ -34,50 +30,49 @@ body {
 }
 
 main{
-  height: 100%;
-  
+  height: 100%; 
 }
 
 .container-grid {
-    display: grid;
-    height:  100vh;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows:    repeat(4, 1fr);
-    grid-template-areas:
-    "a a b b b"
-    "a a b b b"
-    "c c c d d"
-    "c c c d d";
-    gap: 8px;
-  }
+  display: grid;
+  height:  100vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows:    repeat(4, 1fr);
+  grid-template-areas:
+  "a a b b b"
+  "a a b b b"
+  "c c c d d"
+  "c c c d d";
+  gap: 8px;
+}
   
-  .container-grid > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    display:flex;
-    padding: center;
-    margin-top: 20px;
-    margin-left: 8px;
-    margin-bottom: 8px;
-    margin-right: 20px;
-  }
+.container-grid > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  display:    flex;
+  padding:    center;
+  margin-top:    20px;
+  margin-left:   8px;
+  margin-bottom: 8px;
+  margin-right:  20px;
+}
 
 
 
 .item1 { 
-  grid-area: a;
+  grid-area:  a;
   transition: all 0.3s; 
 }
 .item2 { 
-  grid-area: b;
+  grid-area:  b;
   transition: all 0.3s; 
 }
 .item3 { 
-  grid-area: c;
+  grid-area:  c;
   transition: all 0.3s;  
 }
 .item4 { 
-  grid-area: d;
+  grid-area:  d;
   transition: all 0.3s;  
 }
 
@@ -85,28 +80,28 @@ main{
 .item1:hover{
   filter: grayscale(30%);
   cursor: pointer;
-  transform: scale(1.05);
+  transform:  scale(1.05);
   transition: all 0.5s;
 }
 
 .item2:hover{
   filter: grayscale(30%);
   cursor: pointer;
-  transform: scale(1.05);
+  transform:  scale(1.05);
   transition: all 0.5s;
 }
 
 .item3:hover{
   filter: grayscale(30%);
   cursor: pointer;
-  transform: scale(1.05);
+  transform:  scale(1.05);
   transition: all 0.5s;
 }
 
 .item4:hover{
   filter: grayscale(30%);
   cursor: pointer;
-  transform: scale(1.05);
+  transform:  scale(1.05);
   transition: all 0.5s;
 }
  
@@ -114,105 +109,105 @@ main{
 /* cuadro-1 */
 #antena{
  height: 200px;
- width: 200px;
+ width:  200px;
  margin-left: 100px;
- transition: all 0.3s; 
+ transition:  all 0.3s; 
 }
 #antena:hover{
-  transform: scale(1.1);
+  transform:  scale(1.1);
   transition: all 0.5s;
 }
 
 #h1-1{
   margin-left: 80px;
-  transition: all 0.5s;
+  transition:  all 0.5s;
 }
 
 
 #h2-1{
-  margin-left: 300px;
+  margin-left:  300px;
   margin-right: 10px;
-  margin-top: 120px;
-  font-weight: bold;
-  font-size: 80px;
+  margin-top:   120px;
+  font-weight:  bold;
+  font-size:    80px;
 }
 
 /* cuadro-2 */
 #icon-1{
   height: 220px;
-  width: 220px;
+  width:  220px;
   margin-left: 30px;
-  margin-top:-30px;
-  transition: all 0.3s; 
+  margin-top: -30px;
+  transition:  all 0.3s; 
 }
 
 #icon-1:hover{
-  transform: scale(1.1);
+  transform:  scale(1.1);
   transition: all 0.5s;
 }
 
 #h1-2{
-  margin-top: 20px;
+  margin-top:  20px;
   margin-left: 280px;
 }
 
 #h2-2{
-  margin-left:80px;
+  margin-left:  80px;
   margin-right: 15px;
-  margin-top: 50px;
-  font-weight: bold;
-  font-size: 100px;
+  margin-top:   50px;
+  font-weight:  bold;
+  font-size:    100px;
 }
 
 #icon-2{
   height: 220px;
-  width: 220px;
+  width:  220px;
   margin-left: 30px;
-  margin-top:-30px;
-  transition: all 0.3s; 
+  margin-top: -30px;
+  transition:  all 0.3s; 
 }
 
 #icon-2:hover{
-  transform: scale(1.1);
+  transform:  scale(1.1);
   transition: all 0.5s;
 }
 
 #h1-3{
-  margin-top: 20px;
+  margin-top:  20px;
   margin-left: 280px;
 }
 
 #h2-3{
-  margin-left:280px;
+  margin-left:  280px;
   margin-right: 10px;
-  margin-top: 50px;
-  font-weight: bold;
-  font-size: 100px;
+  margin-top:   50px;
+  font-weight:  bold;
+  font-size:    100px;
 }
 
 #icon-3{
   height: 200px;
-  width: 200px;
+  width:  200px;
   margin-left: 100px;
-  transition: all 0.3s; 
+  transition:  all 0.3s; 
 }
 
 #icon-3:hover{
-  transform: scale(1.1);
+  transform:  scale(1.1);
   transition: all 0.5s;
 }
 
 #h1-4{
   margin-left: 70px;
-  margin-top: 20px;
+  margin-top:  20px;
 }
 
 #h2-4{
-  margin-left: 300px;
+  margin-left:  300px;
   margin-right: 10px;
-  margin-top: 120px;
-  font-weight: bold;
-  font-size: 80px;
+  margin-top:   120px;
+  font-weight:  bold;
+  font-size:    80px;
 }
 
 #a-1:hover{
@@ -244,89 +239,88 @@ main{
   /* cuadro-1 */
   #antena{
     height: 150px;
-    width: 150px;
+    width:  150px;
     margin-left: 30px;
   }
 
   #h1-1{
     margin-left: 10px;
-    font-size: 30px;
-    transition: all 0.5s;
+    font-size:   30px;
+    transition:  all 0.5s;
   }
   
   
   #h2-1{
-    margin-left: 20px;
+    margin-left:  20px;
     margin-right: 10px;
-    margin-top: 120px;
-    font-weight: bold;
-    font-size: 40px;
+    margin-top:   120px;
+    font-weight:  bold;
+    font-size:    40px;
   }
 
   /* cuadro-2 */
   #icon-1{
     height: 160px;
-    width: 160px;
+    width:  160px;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top:  30px;
   }
 
   #h1-2{
-    margin-top: 5px;
+    margin-top:  5px;
     margin-left: 40px;
-    font-size: 30px;
+    font-size:   30px;
   }
   
   #h2-2{
-    margin-left:80px;
+    margin-left:  80px;
     margin-right: 15px;
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 80px;
+    margin-top:   50px;
+    font-weight:  bold;
+    font-size:    80px;
   }
 
   /* cuadro-3 */
   #icon-2{
     height: 160px;
-    width: 160px;
+    width:  160px;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top:  30px;
   }
 
   #h1-3{
-    margin-top: 5px;
+    margin-top:  5px;
     margin-left: 0px;
-    font-size: 30px
+    font-size:   30px
   }
   
   #h2-3{
-    margin-left:230px;
+    margin-left:  230px;
     margin-right: 10px;
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 80px;
+    margin-top:   50px;
+    font-weight:  bold;
+    font-size:    80px;
   }
 
   /* cuadro-4 */
   #icon-3{
     height: 150px;
-    width: 150px;
+    width:  150px;
     margin-left: 30px;
   }
 
   #h1-4{
-    /* margin-left: 10px; */
     margin-top: 5px;
     margin-left: 15px;
     font-size: 30px;
   }
   
   #h2-4{
-    margin-left: 20px;
+    margin-left:  20px;
     margin-right: 10px;
-    margin-top: 120px;
-    font-weight: bold;
-    font-size: 40px;
+    margin-top:   120px;
+    font-weight:  bold;
+    font-size:    40px;
   }
 
 }
@@ -335,89 +329,89 @@ main{
   /* cuadro-1 */
   #antena{
     height: 150px;
-    width: 150px;
+    width:  150px;
     margin-left: 50px;
   }
 
   #h1-1{
     margin-left: 30px;
-    font-size: 30px;
-    transition: all 0.5s;
+    font-size:   30px;
+    transition:  all 0.5s;
   }
   
   
   #h2-1{
-    margin-left: 20px;
+    margin-left:  20px;
     margin-right: 10px;
-    margin-top: 120px;
-    font-weight: bold;
-    font-size: 40px;
+    margin-top:   120px;
+    font-weight:  bold;
+    font-size:    40px;
   }
 
   /* cuadro-2 */
   #icon-1{
     height: 180px;
-    width: 180px;
+    width:  180px;
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top:  20px;
   }
 
   #h1-2{
-    margin-top: 5px;
+    margin-top:  5px;
     margin-left: 80px;
-    font-size: 30px;
+    font-size:   30px;
   }
   
   #h2-2{
-    margin-left:80px;
+    margin-left:  80px;
     margin-right: 15px;
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 80px;
+    margin-top:   50px;
+    font-weight:  bold;
+    font-size:    80px;
   }
 
   /* cuadro-3 */
   #icon-2{
     height: 180px;
-    width: 180px;
+    width:  180px;
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top:  10px;
   }
 
   #h1-3{
-    margin-top: 5px;
+    margin-top:  5px;
     margin-left: 90px;
-    font-size: 30px
+    font-size:   30px
   }
   
   #h2-3{
-    margin-left:230px;
+    margin-left:  230px;
     margin-right: 10px;
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 80px;
+    margin-top:   50px;
+    font-weight:  bold;
+    font-size:    80px;
   }
 
   /* cuadro-4 */
   #icon-3{
     height: 150px;
-    width: 150px;
+    width:  150px;
     margin-left: 50px;
   }
 
   #h1-4{
     /* margin-left: 10px; */
-    margin-top: 5px;
+    margin-top:  5px;
     margin-left: 30px;
-    font-size: 30px;
+    font-size:   30px;
   }
   
   #h2-4{
-    margin-left: 30px;
+    margin-left:  30px;
     margin-right: 10px;
-    margin-top: 120px;
-    font-weight: bold;
-    font-size: 40px;
+    margin-top:   120px;
+    font-weight:  bold;
+    font-size:    40px;
   }
 
 }
@@ -427,102 +421,97 @@ main{
   /* cuadro-1 */
   #antena{
     height: 180px;
-    width: 180px;
+    width:  180px;
     margin-left: 40px;
   }
 
   #h1-1{
     margin-left: 30px;
-    font-size: 40px;
-    transition: all 0.5s;
+    font-size:   40px;
+    transition:  all 0.5s;
   }
   
   
   #h2-1{
-    margin-left: 250px;
+    margin-left:  250px;
     margin-right: 10px;
-    margin-top: 130px;
-    font-weight: bold;
-    font-size: 60px;
+    margin-top:   130px;
+    font-weight:  bold;
+    font-size:    60px;
   }
 
   /* cuadro-2 */
   #icon-1{
     height: 200px;
-    width: 200px;
+    width:  200px;
     margin-left: 30px;
-    margin-top: 0px;
+    margin-top:  0px;
   }
 
   #h1-2{
-    margin-top: 5px;
+    margin-top:  5px;
     margin-left: 80px;
-    font-size: 40px;
+    font-size:   40px;
   }
   
   #h2-2{
-    margin-left:80px;
+    margin-left:  80px;
     margin-right: 15px;
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 80px;
+    margin-top:   50px;
+    font-weight:  bold;
+    font-size:    80px;
   }
 
   /* cuadro-3 */
   #icon-2{
     height: 180px;
-    width: 180px;
+    width:  180px;
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top:  10px;
   }
 
   #h1-3{
-    margin-top: 5px;
+    margin-top:  5px;
     margin-left: 90px;
-    font-size: 40px
+    font-size:   40px
   }
   
   #h2-3{
-    margin-left:230px;
+    margin-left:  230px;
     margin-right: 10px;
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 80px;
+    margin-top:   50px;
+    font-weight:  bold;
+    font-size:    80px;
   }
 
   /* cuadro-4 */
   #icon-3{
     height: 150px;
-    width: 150px;
+    width:  150px;
     margin-left: 80px;
   }
 
   #h1-4{
     /* margin-left: 10px; */
-    margin-top: 5px;
+    margin-top:  5px;
     margin-left: 80px;
-    font-size: 40px;
+    font-size:   40px;
   }
   
   #h2-4{
-    margin-left: 250px;
+    margin-left:  250px;
     margin-right: 10px;
-    margin-top: 100px;
-    font-weight: bold;
-    font-size: 80px;
+    margin-top:   100px;
+    font-weight:  bold;
+    font-size:    80px;
   }
 
 }
-
-
 
 /* dropdown */
 .dropdown{
   margin-left:0px;
 }
-/* .dropdown-menu{
-  margin-left
-} */
 
 #userimg{
   margin-left: 895px;

@@ -1,13 +1,10 @@
 const { Router } = require('express');
-const { check } = require('express-validator');
-
-
-const { validarCampos, validarJWT } = require('../middlewares');
-
-
-const { login, googleSignin, renovarToken } = require('../controllers/auth');
-
-
+const { check }  = require('express-validator');
+const { validarCampos, 
+        validarJWT }  = require('../middlewares');
+const { login, 
+        googleSignin, 
+        renovarToken } = require('../controllers/auth');
 const router = Router();
 
 router.post('/login',[
@@ -22,7 +19,5 @@ router.post('/google',[
 ], googleSignin );
 
 router.get('/', validarJWT, renovarToken );
-
-
 
 module.exports = router;  

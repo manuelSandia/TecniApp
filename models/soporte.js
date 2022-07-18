@@ -30,14 +30,6 @@ const SoporteSchema = Schema({
         type: String,
         required: [true, 'la descripcion es oblidatoria']
     },
-    // antena: {
-    //     type: String,
-    //     required: [true, 'El modelo de antena es obligatorio']
-    // },
-    // router: {
-    //     type: String,
-    //     required: [true, 'El modelo de router es obligatorio']
-    // },
     fecha: {
         type: String,
         required: [true, 'la fecha es obligatoria']
@@ -50,7 +42,6 @@ const SoporteSchema = Schema({
     usuario: {
         type: Schema.Types.ObjectId,
         ref: 'Usuario',
-        // required: true
     },
     
 },

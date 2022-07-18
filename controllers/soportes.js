@@ -1,5 +1,5 @@
-const { response }    = require('express');
-const { Soporte } = require('../models');
+const { response } = require('express');
+const { Soporte }  = require('../models');
 
 
 // Controlador para Obtener todos los Soportes tecnicos:
@@ -62,21 +62,12 @@ const crearSoporte = async(req, res = response ) => {
 
     const { estado, usuario, ...body } = req.body;
 
-    // const instalacionDB = await Instalacion.findOne({ nombre: body.nombre });
-
-    // if ( instalacionDB ) {
-    //     return res.status(400).json({
-    //         msg: `la instalacion ${ instalacionDB.nombre }, ya existe`
-    //     });
-    // }
-
     // Generar la data a guardar
     const data = {
         ...body,
         nombre:   body.nombre.toUpperCase(),
         apellido: body.apellido.toUpperCase(),
         cedula:   body.cedula.toUpperCase()
-        // usuario: req.usuario._id
     }
 
     const soporte = new Soporte( data );

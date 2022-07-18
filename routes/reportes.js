@@ -8,11 +8,8 @@ const { obtenerReportes,
         borrarReporte,
         completarReporte }   = require('../controllers/reportes');
 const { existeReportePorId } = require('../helpers');
-const { validarJWT, validarCampos, esAdminRole } = require('../middlewares');
+const { validarCampos }      = require('../middlewares');
 const router = Router();
-
-
-
 
 
 //  Obtener todos los Reportes - publico:
@@ -30,14 +27,12 @@ router.get('/obtener/:id',[
 
 // Registrar una Reporte:
 router.post('/registro', [ 
-    // validarJWT,
     check('nombre','El nombre es obligatorio').not().isEmpty(),
     validarCampos
 ], crearReporte );
 
-// Actualizar una Instalacion Registrada por Id:
+// Actualizar un Reporte Registrado por Id:
 router.put('/actualizar/:id',[
-    // validarJWT,
     check('id','No es un id de Mongo válido').isMongoId(),
     check('id').custom( existeReportePorId ),
     validarCampos
@@ -45,16 +40,13 @@ router.put('/actualizar/:id',[
 
 // Completar una Reporte por Id:
 router.put('/completar/:id',[
-    // validarJWT,
     check('id','No es un id de Mongo válido').isMongoId(),
     check('id').custom( existeReportePorId ),
     validarCampos
 ], completarReporte );
 
-// Borrar una Instalacion de DB por Id:
+// Borrar un Reporte de DB por Id:
 router.delete('/borrar/:id',[
-    // validarJWT,
-    // esAdminRole,
     check('id', 'No es un id de Mongo válido').isMongoId(),
     check('id').custom( existeReportePorId ),
     validarCampos,

@@ -1,22 +1,18 @@
 const path = require('path');
 const fs   = require('fs');
-
 const cloudinary = require('cloudinary').v2
 cloudinary.config( process.env.CLOUDINARY_URL );
 
-const { response } = require('express');
+const { response }     = require('express');
 const { subirArchivo } = require('../helpers');
-
 const { Usuario, Producto } = require('../models');
+
 
 
 const cargarArchivo = async(req, res = response) => {
 
-
     try {
-        
-        // txt, md
-        // const nombre = await subirArchivo( req.files, ['txt','md'], 'textos' );
+
         const nombre = await subirArchivo( req.files, undefined, 'imgs' );
         res.json({ nombre });
 

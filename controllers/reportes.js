@@ -62,21 +62,12 @@ const crearReporte = async(req, res = response ) => {
 
     const { estado, usuario, ...body } = req.body;
 
-    // const instalacionDB = await Instalacion.findOne({ nombre: body.nombre });
-
-    // if ( instalacionDB ) {
-    //     return res.status(400).json({
-    //         msg: `la instalacion ${ instalacionDB.nombre }, ya existe`
-    //     });
-    // }
-
     // Generar la data a guardar
     const data = {
         ...body,
         nombre:   body.nombre.toUpperCase(),
         apellido: body.apellido.toUpperCase(),
         cedula:   body.cedula.toUpperCase()
-        // usuario: req.usuario._id
     }
 
     const reporte = new Reporte( data );

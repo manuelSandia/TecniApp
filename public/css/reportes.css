@@ -2,14 +2,10 @@
  
 }
 
-
 html,
 body {
-  
   border: 20px;
   height: 105%;
-  /* width: 100%;
-  height: 100%; */
   background: rgb(210,210,210);
   background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(150,150,150,1) 59%, rgba(56,58,59,1) 100%);
 }
@@ -34,33 +30,32 @@ body {
 }
 
 main{
-  height: 100%;
-  
+  height: 100%;  
 }
 
 .container-grid {
-    display: grid;
-    height:  100vh;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows:    repeat(4, 1fr);
-    grid-template-areas:
-    "a a d c c"
-    "b b b b b"
-    "b b b b b"
-    "b b b b b";
-    gap: 8px;
-  }
+  display: grid;
+  height:  100vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows:    repeat(4, 1fr);
+  grid-template-areas:
+  "a a d c c"
+  "b b b b b"
+  "b b b b b"
+  "b b b b b";
+  gap: 8px;
+}
   
-  .container-grid > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    display:flex;
-    padding: center;
-    margin-top: 20px;
-    margin-left: 8px;
-    margin-bottom: 8px;
-    margin-right: 20px;
-  }
+.container-grid > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  display:    flex;
+  padding:    center;
+  margin-top:    20px;
+  margin-left:   8px;
+  margin-bottom: 8px;
+  margin-right:  20px;
+}
 
 
 
@@ -74,84 +69,74 @@ main{
 .item1:hover{
   filter: grayscale(30%);
   cursor: pointer;
-  transform: scale(1.05);
+  transform:  scale(1.05);
   transition: all 0.5s;
 }
 
-/* .item2:hover{
-  filter: grayscale(30%);
-  cursor: pointer;
-  transform: scale(1.05);
-} */
 
 .item3:hover{
   filter: grayscale(30%);
   cursor: pointer;
-  transform: scale(1.05);
+  transform:  scale(1.05);
   transition: all 0.5s;
 }
 
 .item4:hover{
   filter: grayscale(30%);
   cursor: pointer;
-  transform: scale(1.05);
+  transform:  scale(1.05);
   transition: all 0.5s;
 }
  
-
-
 #antena{
  height: 50px;
- width: 50px;
+ width:  50px;
  margin-left: 20px;
  margin-top: -50px;
 }
-/* #antena:hover{
-  transform: scale(1.1);
-} */
+
 
 #titulo{
-  margin-top:45px;
+  margin-top:  45px;
   margin-left: 20px;
-  transition: all 0.5s;
+  transition:  all 0.5s;
 }
 
 #sub-1{
-    margin-left: 10px;
-    margin-bottom: 300px;
-    transition: all 0.5s;
+  margin-left:   10px;
+  margin-bottom: 300px;
+  transition:    all 0.5s;
 }
 
 #h2-1{
-  margin-left: 300px;
+  margin-left:  300px;
   margin-right: 10px;
-  margin-top: -80px;
-  font-weight: bold;
-  font-size: 80px;
-  color: green;
+  margin-top:  -80px;
+  font-weight:  bold;
+  font-size:    80px;
+  color:        green;
 }
 
 #sub-2{
   margin-left: -500px;
   margin-right: 0px;
-  margin-top: 100px;
-  font-weight: bold;
-  /* font-size: 80px */
+  margin-top:   100px;
+  font-weight:  bold;
 }
 
 #h2-1-1{
-    margin-left: 800px;
-    margin-right: 10px;
-    margin-top: -10px;
-    font-weight: bold;
-    font-size: 80px;
-  }
+  margin-left:  800px;
+  margin-right: 10px;
+  margin-top:  -10px;
+  font-weight:  bold;
+  font-size:    80px;
+}
 
 #icon-1{
   height: 220px;
-  width: 220px;
+  width:  220px;
   margin-left: 30px;
-  margin-top:-30px;
+  margin-top: -30px;
 }
 
 #icon-1:hover{
@@ -159,24 +144,24 @@ main{
 }
 
 #h1-2{
-  margin-top: 20px;
+  margin-top:  20px;
   margin-left: 280px;
-  transition: all 0.5s;
+  transition:  all 0.5s;
 }
 
 #h2-2{
-  margin-left:80px;
+  margin-left:  80px;
   margin-right: 15px;
-  margin-top: 50px;
-  font-weight: bold;
-  font-size: 100px;
+  margin-top:   50px;
+  font-weight:  bold;
+  font-size:    100px;
 }
 
 #icon-2{
   height: 50px;
-  width: 50px;
+  width:  50px;
   margin-left: 30px;
-  margin-top:-50px;
+  margin-top: -50px;
 }
 
 #icon-2:hover{
@@ -184,26 +169,26 @@ main{
 }
 
 #h1-3{
-  margin-top: 45px;
+  margin-top:  45px;
   margin-left: 40px;
-  transition: all 0.5s;
+  transition:  all 0.5s;
 }
 
 #h2-3{
-  margin-left:320px;
+  margin-left:  320px;
   margin-right: 10px;
-  margin-top: -80px;
-  font-weight: bold;
-  font-size: 80px;
-  color: red;
+  margin-top:  -80px;
+  font-weight:  bold;
+  font-size:    80px;
+  color:        red;
 }
 
 #icon-3{
   height: 100px;
-  width: 100px;
+  width:  100px;
   margin-left: 50px;
-  margin-top: 10px;
-  transition: all 0.5s;
+  margin-top:  10px;
+  transition:  all 0.5s;
 }
 
 #icon-3:hover{
@@ -212,15 +197,15 @@ main{
 
 #h1-4{
   margin-left: 70px;
-  margin-top: 20px;
+  margin-top:  20px;
 }
 
 #h2-4{
-  margin-left: 300px;
+  margin-left:  300px;
   margin-right: 10px;
-  margin-top: 120px;
-  font-weight: bold;
-  font-size: 80px;
+  margin-top:   120px;
+  font-weight:  bold;
+  font-size:    80px;
 }
 
 #a-1:hover{
@@ -252,51 +237,36 @@ main{
 .dropdown{
   margin-left:0px;
 }
-/* .dropdown-menu{
-  margin-left
-} */
 
 #userimg{
   margin-left: 895px;
 }
 
-/* Botones de opciones de Instalaciones */
+/* Botones de opciones de Reportes */
 #btnComp{
-  /* margin-left: 110px;
-  margin-top: -60px; */
   transition: all 0.3s;
 }
 
 #btnAct{
-  /* margin-left: 110px;
-  margin-top: -60px; */
   transition: all 0.3s;
 }
 
 #btnBorrar{
-  /* margin-left: 110px;
-  margin-top: -60px; */
   transition: all 0.3s;
 }
 
 #btnComp:hover{
-  /* margin-left: 110px;
-  margin-top: -60px; */
   transition: all 0.3s;
-  transform: scale(1.2);
+  transform:  scale(1.2);
 }
 
 #btnAct:hover{
-  /* margin-left: 110px;
-  margin-top: -60px; */
   transition: all 0.3s;
-  transform: scale(1.2);
+  transform:  scale(1.2);
 }
 
 #btnBorrar:hover{
-  /* margin-left: 110px;
-  margin-top: -60px; */
   transition: all 0.3s;
-  transform: scale(1.2);
+  transform:  scale(1.2);
 }
 

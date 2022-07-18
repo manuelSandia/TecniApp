@@ -1,9 +1,7 @@
 const { Socket } = require("socket.io");
 const { comprobarJWT } = require("../helpers");
 const { ChatMensajes } = require('../models')
-
 const chatMensajes = new ChatMensajes();
-
 const socketController = async( socket = new Socket(), io ) =>{
 
     console.log('cliente conectado', socket.id);

@@ -9,8 +9,6 @@ class Mensaje {
 }
 
 
-
-
 class ChatMensajes {
 
     constructor() {

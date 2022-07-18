@@ -30,14 +30,6 @@ const ReporteSchema = Schema({
         type: String,
         required: [true, 'la descripcion es obligatoria']
     },
-    // antena: {
-    //     type: String,
-    //     required: [true, 'El modelo de antena es obligatorio']
-    // },
-    // router: {
-    //     type: String,
-    //     required: [true, 'El modelo de router es obligatorio']
-    // },
     fecha: {
         type: String,
         required: [true, 'la fecha es obligatoria']
