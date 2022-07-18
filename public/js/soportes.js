@@ -1,36 +1,34 @@
-const realizadas = document.querySelector('#realizadas');
+const realizadas      = document.querySelector('#realizadas');
 const mostrarSoportes = document.querySelector('tbody');
 const sopPendientes = document.querySelector('#h2-3');
-const btnCompletar   = document.querySelector('#btnComp');
-const btnActualizar  = document.querySelector('#btnAct');
-const body1      = document.querySelector('body');
-const formulario = document.querySelector('#tabla');
+const btnCompletar  = document.querySelector('#btnComp');
+const btnActualizar = document.querySelector('#btnAct');
+const body1         = document.querySelector('body');
+const formulario    = document.querySelector('#tabla');
 const sopRealizados = document.querySelector('#h2-1');
 
 
+const urlObtSop = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/obtener'
+:'https://proyecto-tecniapp.herokuapp.com/api/soportes/obtener';
 
-
-const urlSop = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/'
-:'https://proyecto-tecniapp.herokuapp.com/api/soportes/';
-
-const urlComp1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/completadas/'
+const urlSopComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/completadas/'
 :'https://proyecto-tecniapp.herokuapp.com/api/soportes/completadas/';
 
 
-fetch(urlSop + 'obtener', {
-    method: 'GET', 
-    body: JSON.stringify(),
-    headers: { 'Content-Type': 'application/json'}
+fetch(urlObtSop, {
+  method: 'GET', 
+  body: JSON.stringify(),
+  headers: { 'Content-Type': 'application/json'}
 })
 .then( resp => resp.json() )
 .then( ({total, soportes}) => {
-  console.log(soportes)
     
   sopPendientes.innerText = total; 
 
   const dibujarSoportes = ( soportes = [] ) =>{
     
     let tablaHtml = '';
+
     soportes.forEach( ({ _id, cedula, nombre, apellido, direccion, zona, descripcion, telefono, fecha }) =>{
       
       tablaHtml += `
@@ -65,7 +63,7 @@ fetch(urlSop + 'obtener', {
 
 
 // Mostrar el numero de Soportes Realizados
-fetch(urlComp1, {
+fetch(urlSopComp, {
   method: 'GET', 
   body: JSON.stringify(),
   headers: { 'Content-Type': 'application/json'}
@@ -79,10 +77,6 @@ fetch(urlComp1, {
 .catch( err =>{
   console.log(err);
 });
-
-
-
-
 
 
 // Obtener Soporte por Id para Actualizar:

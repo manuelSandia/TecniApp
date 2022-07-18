@@ -1,10 +1,11 @@
 const miFormulario = document.querySelector('form');
 
-const urlRegRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/'
-:'https://proyecto-tecniapp.herokuapp.com/api/reportes/';
+const urlRegRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/registro'
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/registro';
 
 miFormulario.addEventListener('submit', ev => {
     ev.preventDefault();
+
     const formData = {};
 
     for( let el of miFormulario.elements ){
@@ -12,11 +13,8 @@ miFormulario.addEventListener('submit', ev => {
             formData[el.name] = el.value;
         }         
     };     
-
-    console.log(formData);
-    
    
-    fetch(urlRegRep + 'registro', {
+    fetch(urlRegRep, {
         method: 'POST', 
         body: JSON.stringify(formData),
         headers: { 'Content-Type': 'application/json'}
@@ -46,7 +44,6 @@ miFormulario.addEventListener('submit', ev => {
             icon: 'error',
             title: 'Error al Registrar',
             text: 'Comunicate con el Administrador',
-            // footer: '<a href="">Why do I have this issue?</a>'
-          })
-    })
+        });
+    });
 });    

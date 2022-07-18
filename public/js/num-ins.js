@@ -1,9 +1,9 @@
 const numero = document.querySelector('#h2-1');
 
-const urlIns1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/'
-:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/';
+const urlObtIns1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/obtener'
+:'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/obtener';
 
-fetch(urlIns1 + 'obtener', {
+fetch(urlObtIns1, {
     method: 'GET', 
     body: JSON.stringify(),
     headers: { 'Content-Type': 'application/json'}

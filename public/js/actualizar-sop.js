@@ -8,18 +8,19 @@ const zonaForm        = document.querySelector('#validationCustom04');
 const fechaForm       = document.querySelector('#validationCustom05');
 const descripcionForm = document.querySelector('#validationCustom06');
 
-const urlObt = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/'
-:'https://proyecto-tecniapp.herokuapp.com/api/soportes/';
+const urlObtSop = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/obtener/'
+:'https://proyecto-tecniapp.herokuapp.com/api/soportes/obtener/';
 
-const urlAct = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/actualizar/'
+const urlActSop = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/actualizar/'
 :'https://proyecto-tecniapp.herokuapp.com/api/soportes/actualizar/';
 
-document.addEventListener('DOMContentLoaded', ()=>{
 
+// Dibujar la Informacion a Actualizar en el Formulario:
+document.addEventListener('DOMContentLoaded', ()=>{
 
     let id = localStorage.getItem('id');
 
-    fetch(urlObt +'obtener/'+ id, {   
+    fetch(urlObtSop + id, {   
         method: 'GET', 
         body: JSON.stringify(),
         headers: { 'Content-Type': 'application/json'}
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 });
 
-// Funcion para Actualizar los Datos de la Instalacion:
+// Funcion para Actualizar los Datos del Soporte:
 miFormulario.addEventListener('submit', ev => {
     ev.preventDefault();
     let id = localStorage.getItem('id');
@@ -57,8 +58,7 @@ miFormulario.addEventListener('submit', ev => {
 
     console.log(formData);
     
-   
-    fetch(urlAct + id, {
+    fetch(urlActSop + id, {
         method: 'PUT', 
         body: JSON.stringify(formData),
         headers: { 'Content-Type': 'application/json'}

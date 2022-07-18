@@ -1,36 +1,34 @@
-const realizadas = document.querySelector('#realizadas');
+const realizadas      = document.querySelector('#realizadas');
 const mostrarReportes = document.querySelector('tbody');
 const repPendientes = document.querySelector('#h2-3');
-const btnCompletar   = document.querySelector('#btnComp');
-const btnActualizar  = document.querySelector('#btnAct');
-const body1      = document.querySelector('body');
-const formulario = document.querySelector('#tabla');
+const btnCompletar  = document.querySelector('#btnComp');
+const btnActualizar = document.querySelector('#btnAct');
+const body1         = document.querySelector('body');
+const formulario    = document.querySelector('#tabla');
 const repRealizados = document.querySelector('#h2-1');
 
 
+const urlObtRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/obtener'
+:'https://proyecto-tecniapp.herokuapp.com/api/reportes/obtener';
 
-
-const urlRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/'
-:'https://proyecto-tecniapp.herokuapp.com/api/reportes/';
-
-const urlComp1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/atendidos/'
+const urlRepComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/atendidos/'
 :'https://proyecto-tecniapp.herokuapp.com/api/reportes/atendidos/';
 
 
-fetch(urlRep + 'obtener', {
-    method: 'GET', 
-    body: JSON.stringify(),
-    headers: { 'Content-Type': 'application/json'}
+fetch(urlObtRep, {
+  method: 'GET', 
+  body: JSON.stringify(),
+  headers: { 'Content-Type': 'application/json'}
 })
 .then( resp => resp.json() )
 .then( ({total, reportes}) => {
-  console.log(reportes)
     
   repPendientes.innerText = total; 
 
   const dibujarReportes = ( reportes = [] ) =>{
     
     let tablaHtml = '';
+
     reportes.forEach( ({ _id, cedula, nombre, apellido, direccion, zona, descripcion, telefono, fecha }) =>{
       
       tablaHtml += `
@@ -64,8 +62,8 @@ fetch(urlRep + 'obtener', {
 });
 
 
-// Mostrar el numero de Soportes Realizados
-fetch(urlComp1, {
+// Mostrar el numero de Reportes Realizados
+fetch(urlRepComp, {
   method: 'GET', 
   body: JSON.stringify(),
   headers: { 'Content-Type': 'application/json'}
@@ -82,10 +80,7 @@ fetch(urlComp1, {
 
 
 
-
-
-
-// Obtener Soporte por Id para Actualizar:
+// Obtener Reporte por Id para Actualizar:
 body1.addEventListener('click', ()=>{
    
   if(event.target.id === "btnAct"){

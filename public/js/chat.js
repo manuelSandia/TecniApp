@@ -1,5 +1,4 @@
 
-
 const url = ( window.location.hostname.includes('localhost'))
    ?'http://localhost:8080/api/auth/'
    :'https://proyecto-tecniapp.herokuapp.com/api/auth/';
@@ -13,12 +12,6 @@ const txtMensaje = document.querySelector('#txtMensaje');
 const ulUsuarios = document.querySelector('#ulUsuarios');
 const ulMensajes = document.querySelector('#ulMensajes');
 const btnSalir   = document.querySelector('#btnSalir');
-
-
-
-
-
-
 
 // Validar el token del localstorage
 const validarJWT = async() =>{
@@ -69,7 +62,7 @@ const conectarSocket = async() =>{
 
 const dibujarUsuarios = ( usuarios = []) =>{
     let usersHtml = '';
-    usuarios.forEach( ({ nombre, uid, img}) =>{
+    usuarios.forEach( ({ nombre, img}) =>{
 
         usersHtml += `
         
@@ -111,7 +104,6 @@ const dibujarMensajes = ( mensajes = []) =>{
 txtMensaje.addEventListener('keyup', ({ keyCode })=>{
 
     const mensaje = txtMensaje.value;
-    // const uid     = txtUid.value;
 
     if (keyCode !== 13) {return;}
     if (mensaje.length === 0) {return;}
@@ -122,20 +114,11 @@ txtMensaje.addEventListener('keyup', ({ keyCode })=>{
 
 });
 
-
-
-
 const main = async() =>{
-
     // Validar JWT
     await validarJWT();
-
 }
-
-
-
 
 main();
 
 
-//const socket = io(); 

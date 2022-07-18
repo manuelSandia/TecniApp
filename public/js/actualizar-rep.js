@@ -8,19 +8,19 @@ const zonaForm        = document.querySelector('#validationCustom04');
 const fechaForm       = document.querySelector('#validationCustom05');
 const descripcionForm = document.querySelector('#validationCustom06');
 
-const urlObtRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/'
+const urlObtRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/obtener/'
 :'https://proyecto-tecniapp.herokuapp.com/api/reportes/';
 
-const urlAct = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/actualizar/'
+const urlActRep = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/actualizar/'
 :'https://proyecto-tecniapp.herokuapp.com/api/reportes/actualizar/';
 
+
+// Dibujar la Informacion a Actualizar en el Formulario:
 document.addEventListener('DOMContentLoaded', ()=>{
 
+    let id = localStorage.getItem('id');  
 
-    let id = localStorage.getItem('id');
-    
-
-    fetch(urlObtRep +'obtener/'+ id, {   
+    fetch(urlObtRep + id, {   
         method: 'GET', 
         body: JSON.stringify(),
         headers: { 'Content-Type': 'application/json'}
@@ -43,9 +43,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 });
 
-// Funcion para Actualizar los Datos de la Instalacion:
+
+// Funcion para Actualizar los Datos del Reporte:
 miFormulario.addEventListener('submit', ev => {
     ev.preventDefault();
+
     let id = localStorage.getItem('id');
 
     const formData = {};
@@ -58,8 +60,7 @@ miFormulario.addEventListener('submit', ev => {
 
     console.log(formData);
     
-   
-    fetch(urlAct + id, {
+    fetch(urlActRep + id, {
         method: 'PUT', 
         body: JSON.stringify(formData),
         headers: { 'Content-Type': 'application/json'}

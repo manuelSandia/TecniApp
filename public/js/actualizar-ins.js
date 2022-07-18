@@ -10,19 +10,20 @@ const fechaForm    = document.querySelector('#validationCustom08');
 const miFormulario = document.querySelector('form');
 
 
-const url2 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/obtener/'
+const urlObtIns = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/obtener/'
 :'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/obtener/';
 
-const urlAct = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/actualizar/'
+const urlActIns = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/actualizar/'
 :'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/actualizar/';
+
+
 
 // Dibujar la Informacion a Actualizar en el Formulario:
 document.addEventListener('DOMContentLoaded', ()=>{
 
-
     let id = localStorage.getItem('id');
 
-    fetch(url2 + id, {   
+    fetch(urlObtIns + id, {   
         method: 'GET', 
         body: JSON.stringify(),
         headers: { 'Content-Type': 'application/json'}
@@ -46,9 +47,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 });
 
+
 // Funcion para Actualizar los Datos de la Instalacion:
 miFormulario.addEventListener('submit', ev => {
     ev.preventDefault();
+
     let id = localStorage.getItem('id');
 
     const formData = {};
@@ -60,9 +63,8 @@ miFormulario.addEventListener('submit', ev => {
     };     
 
     console.log(formData);
-    
-   
-    fetch(urlAct + id, {
+       
+    fetch(urlActIns + id, {
         method: 'PUT', 
         body: JSON.stringify(formData),
         headers: { 'Content-Type': 'application/json'}

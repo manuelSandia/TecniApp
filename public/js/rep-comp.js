@@ -1,31 +1,23 @@
 
 const mostrarReportes = document.querySelector('tbody');
 
-
 const urlObtenerComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/reportes/atendidos/'
 :'https://proyecto-tecniapp.herokuapp.com/api/reportes/atendidos/';
 
 
-
 fetch(urlObtenerComp , {
-    method: 'GET', 
-    body: JSON.stringify(),
-    headers: { 'Content-Type': 'application/json'}
+  method: 'GET', 
+  body: JSON.stringify(),
+  headers: { 'Content-Type': 'application/json'}
 })
 .then( resp => resp.json() )
-.then( ({total, reportes}) => {
+.then( ({ reportes }) => {
   
-    
-//   InstCompletadas.innerText = total; 
-
   const dibujarReportes = ( reportes = [] ) =>{
     
     let tablaHtml = '';
-    reportes.forEach( ({ _id, cedula, nombre, apellido, direccion, telefono, zona, descripcion, fecha, updatedAt }) =>{
+    reportes.forEach( ({ cedula, nombre, apellido, direccion, telefono, zona, descripcion, fecha, updatedAt }) =>{
       
-        
-        
-
       tablaHtml += `
         <tr>
           <th scope="row">${cedula}</th>

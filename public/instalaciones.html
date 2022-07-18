@@ -1,202 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/instalaciones.css">
-    <title>Instalaciones</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/instalaciones.css">
+  <title>Instalaciones</title>
 </head>
 <body>
     
 
-     <!-- Navbar Principal!!! -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="assets/img/snapsvg-seeklogo.com.svg" alt="" width="40" height="34" class="d-inline-block align-text-top">
-            TecniApp</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#"></a>
-              <a class="nav-link" href="#"></a>
-              <a class="nav-link" href="#"></a>
-              <a class="nav-link disabled"></a>
-              <img src="./assets/img/user-1.png" alt="" width="42" height="42" class="rounded-circle me-2" id="userimg">
-              <div class="dropdown">
-                
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="username">
-                  
-                </button>
-                <ul class="dropdown-menu">
-                  <!-- <li><a class="dropdown-item" href="#">Link 1</a></li>
-                  <li><a class="dropdown-item" href="#">Link 2</a></li> -->
-                  <li><a id="btnsalir" class="dropdown-item" href="#">Cerrar sesion</a></li>
-                </ul>
-              </div>
-            </div>
+  <!-- Navbar Principal!!! -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/snapsvg-seeklogo.com.svg" alt="" width="40" height="34" class="d-inline-block align-text-top">
+        TecniApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#"></a>
+          <a class="nav-link" href="#"></a>
+          <a class="nav-link" href="#"></a>
+          <a class="nav-link disabled"></a>
+          <img src="./assets/img/user-1.png" alt="" width="42" height="42" class="rounded-circle me-2" id="userimg">
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="username"></button>
+            <ul class="dropdown-menu">  
+              <li><a id="btnsalir" class="dropdown-item" href="#">Cerrar sesion</a></li>
+            </ul>
           </div>
-        </div>
-      </nav>
-      <!-- fin del Navbar Principal -->
-
-     
-      <div class="grid-container">
-        <div class="grid-item1">
-          <div class="container-grid">
-        
-            <div class="item1 1 shadow bg-body rounded" id="realizadas">
-              <div style="position: relative;">
-                <h1 id="titulo">Realizadas:</h1>
-                <img src="assets/img/realizado.png" class="rounded float-start" alt="..." id="antena">
-                <h2 id="h2-1">0</h2>
-              </div>
-            </div>
-
-            <div class="item3 3 shadow bg-body rounded">
-                <div style="position: relative;">
-                  <h1 id="h1-3">Pendientes:</h1>
-                  <img src="assets/img/pendiente.png" class="rounded float-start" alt="..." id="icon-2">
-                  <h2 id="h2-3">0</h2>
-                </div>
-              </div>
-
-              <div class="item4 4 shadow bg-body rounded">
-                <div style="position: relative;">
-                  <a href="/registro-inst.html">
-                    <img src="assets/img/registro-4.png" class="rounded float-start" alt="..." id="icon-3" title="Registrar Instalacion">
-                  </a>
-                </div>
-              </div>
-              
-            
-            <div class="item2 2 shadow bg-body rounded overflow-auto" id="tabla">
-              <div style="position: relative;">
-                <table class="table table-striped table-hover">
-                    <thead >
-                        <tr>
-                          <th scope="col">C.I.</th>
-                          <th scope="col">Nombre</th>
-                          <th scope="col">Apellido</th>
-                          <th scope="col">Direccion</th>
-                          <th scope="col">Zona</th>
-                          <th scope="col">Coordenadas</th>
-                          <th scope="col">Antena</th>
-                          <th scope="col">Router</th>
-                          <th scope="col">Fecha</th>
-                          <th scope="col">Acciones</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- <tr> -->
-                          <!-- <th scope="row">25.861.627</th>
-                          <td>Juan Alfonso</td>
-                          <td>Perez Briceño</td>
-                          <td>Calle el Hambre</td>
-                          <td>Zona 3</td>
-                          <td>1.8524741 -7.1352151</td>
-                          <td>lite Beam AC-Gen2</td>
-                          <td>MW-305R</td>
-                          <td>13/11/2022</td>
-                          <td> -->
-
-                           
-                            <!-- <div class="dropdown">
-                  
-                              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="username">
-                                <img src="./assets/img/config-1.png" alt="" width="32" height="32" class="rounded-circle me-2" id="configimg">
-                              </button>
-                              <ul class="dropdown-menu">
-                                <li><a id="btnComp" class="dropdown-item" href="#">Completada</a></li>
-                                <li><a id="btnAct" class="dropdown-item" href="#">Actualizar</a></li>
-                                <li><a id="btnBorrar" class="dropdown-item" href="#">Borrar</a></li>
-                              </ul>
-                            </div> -->
-                        
-                          <!-- </td>
-                        </tr> -->
-                        <form>
-                          <imput tipe="hidden" name="data" class="key-data"></imput>
-                        </form>
-                          
-                </table>
-                  
-              </div>
-            </div>
-           
-           
-            
-          </div>
-        </div>
-        <div class="grid-item2">
-          <main class="d-flex flex-nowrap">
-            <h1 class="visually-hidden">Sidebars examples</h1>
-          
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 200px;">
-              <!-- <a href="dashboard.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-                <span class="fs-4">Dashboard</span>
-              </a>
-              <hr> -->
-              <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                  <a href="dashboard.html" class="nav-link text-white" aria-current="page" id="a-1">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-                    Inicio
-                  </a>
-                </li>
-                <li>
-                  <a href="instalaciones.html" class="nav-link active text-white" id="a-2">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                    Instalaciones
-                  </a>
-                </li>
-                <li>
-                  <a href="soportes.html" class="nav-link text-white" id="a-3">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                    Soportes Tc.
-                  </a>
-                </li>
-                <li>
-                  <a href="reportes.html" class="nav-link text-white" id="a-4">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-                    Reportes F. 
-                  </a>
-                </li>
-                <li>
-                  <a href="chat-app.html" class="nav-link text-white" id="a-5">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                    Mensajes
-                  </a>
-                </li>
-              </ul>
-              <hr>
-            </div>
         </div>
       </div>
+    </div>
+  </nav>
+  <!-- fin del Navbar Principal -->
 
-        
+     
+  <div class="grid-container">
 
-         
+    <div class="grid-item1">
+      <div class="container-grid">
+    
+        <div class="item1 1 shadow bg-body rounded" id="realizadas">
+          <div style="position: relative;">
+            <h1 id="titulo">Realizadas:</h1>
+            <img src="assets/img/realizado.png" class="rounded float-start" alt="..." id="antena">
+            <h2 id="h2-1">0</h2>
+          </div>
+        </div>
 
+        <div class="item3 3 shadow bg-body rounded">
+            <div style="position: relative;">
+              <h1 id="h1-3">Pendientes:</h1>
+              <img src="assets/img/pendiente.png" class="rounded float-start" alt="..." id="icon-2">
+              <h2 id="h2-3">0</h2>
+            </div>
+        </div>
+
+        <div class="item4 4 shadow bg-body rounded">
+          <div style="position: relative;">
+            <a href="/registro-inst.html">
+              <img src="assets/img/registro-4.png" class="rounded float-start" alt="..." id="icon-3" title="Registrar Instalacion">
+            </a>
+          </div>
+        </div>
           
-<script src="./socket.io/socket.io.js"></script> 
-<script src="./js/user-log.js"></script> 
-<script src="./js/instalaciones.js"></script>
-<script src="./js/borrarIns.js"></script>
-<script src="./js/completar-ins.js"></script>
+        
+        <div class="item2 2 shadow bg-body rounded overflow-auto" id="tabla">
+          <div style="position: relative;">
+            <table class="table table-striped table-hover">
+              <thead >
+                <tr>
+                  <th scope="col">C.I.</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">Direccion</th>
+                  <th scope="col">Zona</th>
+                  <th scope="col">Coordenadas</th>
+                  <th scope="col">Antena</th>
+                  <th scope="col">Router</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+              <!-- AQUI VA EL CONTENIDO DE LA TABLA -->                   
+            </table>    
+          </div>
+        </div>
+                        
+      </div>
+    </div>
 
 
+    <div class="grid-item2">
+      <main class="d-flex flex-nowrap">
+      <h1 class="visually-hidden">Sidebars examples</h1>
+      
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 200px;">
+        <ul class="nav nav-pills flex-column mb-auto">
 
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link text-white" aria-current="page" id="a-1">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+              Inicio
+            </a>
+          </li>
 
+          <li>
+            <a href="instalaciones.html" class="nav-link active text-white" id="a-2">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+              Instalaciones
+            </a>
+          </li>
 
+          <li>
+            <a href="soportes.html" class="nav-link text-white" id="a-3">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+              Soportes Tc.
+            </a>
+          </li>
 
+          <li>
+            <a href="reportes.html" class="nav-link text-white" id="a-4">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+              Reportes F. 
+            </a>
+          </li>
+
+          <li>
+            <a href="chat-app.html" class="nav-link text-white" id="a-5">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+              Mensajes
+            </a>
+          </li>
+
+        </ul>
+        <hr>
+      </div>
+    </div>
+  </div>
+          
+  <script src="./socket.io/socket.io.js"></script> 
+  <script src="./js/user-log.js"></script> 
+  <script src="./js/instalaciones.js"></script>
+  <script src="./js/borrar-ins.js"></script>
+  <script src="./js/completar-ins.js"></script>
 
 </body>
 </html>

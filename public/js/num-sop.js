@@ -1,9 +1,9 @@
 const numero1 = document.querySelector('#h2-2');
 
-const urlSop1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/'
-:'https://proyecto-tecniapp.herokuapp.com/api/soportes/';
+const urlObtSop1 = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/obtener'
+:'https://proyecto-tecniapp.herokuapp.com/api/soportes/obtener';
 
-fetch(urlSop1 + 'obtener', {
+fetch(urlObtSop1, {
     method: 'GET', 
     body: JSON.stringify(),
     headers: { 'Content-Type': 'application/json'}

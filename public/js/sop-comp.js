@@ -1,31 +1,24 @@
 
 const mostrarSoportes = document.querySelector('tbody');
 
-
 const urlObtenerComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/soportes/completadas/'
 :'https://proyecto-tecniapp.herokuapp.com/api/soportes/completadas/';
 
 
-
 fetch(urlObtenerComp, {
-    method: 'GET', 
-    body: JSON.stringify(),
-    headers: { 'Content-Type': 'application/json'}
+  method: 'GET', 
+  body: JSON.stringify(),
+  headers: { 'Content-Type': 'application/json'}
 })
 .then( resp => resp.json() )
-.then( ({total, soportes}) => {
+.then( ({ soportes }) => {
   
-    
-//   InstCompletadas.innerText = total; 
-
   const dibujarSoportes = ( soportes = [] ) =>{
     
     let tablaHtml = '';
-    soportes.forEach( ({ _id, cedula, nombre, apellido, direccion, telefono, zona, descripcion, fecha, updatedAt }) =>{
-      
-        let date = new Date();
-        // console.log(date.toLocaleDateString());
 
+    soportes.forEach( ({ cedula, nombre, apellido, direccion, telefono, zona, descripcion, fecha, updatedAt }) =>{
+      
       tablaHtml += `
         <tr>
           <th scope="row">${cedula}</th>

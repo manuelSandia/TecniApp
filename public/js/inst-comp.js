@@ -1,31 +1,24 @@
 
 const mostrarInstalaciones = document.querySelector('tbody');
 
-
 const urlObtenerComp = ( window.location.hostname.includes('localhost'))?'http://localhost:8080/api/instalaciones/completadas/'
 :'https://proyecto-tecniapp.herokuapp.com/api/instalaciones/completadas';
 
 
-
 fetch(urlObtenerComp , {
-    method: 'GET', 
-    body: JSON.stringify(),
-    headers: { 'Content-Type': 'application/json'}
+  method: 'GET', 
+  body: JSON.stringify(),
+  headers: { 'Content-Type': 'application/json'}
 })
 .then( resp => resp.json() )
-.then( ({total, instalaciones}) => {
+.then( ({ instalaciones }) => {
   
-    
-//   InstCompletadas.innerText = total; 
-
   const dibujarInstalaciones = ( instalaciones = [] ) =>{
     
     let tablaHtml = '';
-    instalaciones.forEach( ({ _id, cedula, nombre, apellido, direccion, zona, coordenadas,antena, router, fecha, updatedAt }) =>{
-      
-        
-        // console.log(date.toLocaleDateString());
 
+    instalaciones.forEach( ({ cedula, nombre, apellido, direccion, zona, coordenadas,antena, router, fecha, updatedAt }) =>{
+      
       tablaHtml += `
         <tr>
           <th scope="row">${cedula}</th>
