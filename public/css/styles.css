@@ -250,7 +250,7 @@ main{
   html,
   body {
     border: 20px;
-    height: 125%;
+    height: 132%;
     background: rgb(210,210,210);
     background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(150,150,150,1) 59%, rgba(56,58,59,1) 100%);
   }
