@@ -205,3 +205,16 @@ p{
   }
 
 }
+
+
+
+@media screen and (min-width:1750px){
+
+  #user{
+    margin-left: 60px;
+  }
+
+  #ulUsuarios{
+    margin-left: 50px;
+  }
+}
